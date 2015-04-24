@@ -1,0 +1,54 @@
+
+<!-- FILTER STUDENT LIST
+<div class="well filter">
+  <input type="checkbox" ng-click="list(student.*)">All Students</input>
+  <input type="checkbox" ng-click="list(student.here)">Checked In</input>
+  <input type="checkbox" ng-click="list(!student.here)">Checked Out</input>
+</div> -->
+<p>In Progress</p>
+<div class="col-sm-1" ng-repeat='student in students'>
+  <span class="">{{ student.name }}
+    <a class="btn btn-success" ng-click="edit">Edit Student</a>
+
+    <a class="btn btn-danger" ng-show="edit" ng-click="deleteStudent(student)">Delete</a>
+  </span>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- DISPLAY ADMIN (Sign In, List Here / Not Here)============= -->
+  <!-- <div class='row admin'>
+
+    <div class='col-md-6'><h2>HERE</h2>
+      <ul>
+        <li ng-repeat='student in students'>
+          <span>{{student.name}}</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class='col-md-6'> <h2>NOT HERE</h2>
+      <ul>
+        <li ng-repeat='student in students'>
+          <span>{{student.name}}</span>
+        </li>
+      </ul>
+    </div>
+  </div> -->
+
+
+
+
+<div ui-view> </div>
