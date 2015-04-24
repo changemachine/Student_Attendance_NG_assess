@@ -42,10 +42,31 @@
           <h2>STUDENTS SIGN-IN PAGE</h2>
           <ul>
             <li ng-repeat='student in students'>
-              <span>
-                {{ student.name }} {{ student.here }}
-                <a ng-click="student.here = true">Sign In</a>
+              <span>{{ student.name }} {{ student.here }}
+                <a class="btn" ng-show="!student.here" ng-click="student.here = true">Sign In</a>
               </span>
+
+
+  <!--
+    <ul>
+    <li ng-repeat="student in students">
+
+      <span ng-click="editing = true" ng-hide="editing">
+          {{student.name}}
+          <a ng-click="deleteStudent(item)">Delete</a>
+      </span>
+
+      //AFTER YOU CLICK-TO-EDIT====
+      <span class="form-group" ng-show="editing" ng-submit="editing = false">
+        <form class="form-inline" role="form">
+          <input type="text" class="form-control input-sm" ng-model="item.name" placeholder="Name" required/>
+          <button class="btn btn-default btn-sm" type="submit">Save</button>
+        </form>
+      </span>
+    </li>
+  </ul> -->
+
+
             </li>
           </ul>
         </div>
