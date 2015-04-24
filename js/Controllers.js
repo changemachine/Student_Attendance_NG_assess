@@ -4,15 +4,26 @@ studentAttendance.controller('StudentsCtrl', function StudentsCtrl($scope) {
         { name: "Sally Forth", here: false },
         { name: "River Fjord", here: false },
         { name: "John Ford", here: false },
-        { name: "Ford Falcon", here: false }
+        { name: "Spanky Larsen", here: false },
+        { name: "Gurgen Ratskeller", here: false },
+        { name: "Minka Feldspar", here: false },
+        { name: "Tran Falcon", here: false }
     ];
 
+    $scope.studentList = [];
+    // $scope.checkedIn = [];
+
     $scope.signIn = function(student) {
-      $scope.students.student.here = true;
-    }
+      student.here = true;
+      studentList.push(student);
+      console.log(studentList);
+    };
     $scope.signOut = function(student) {
-      $scope.students.student.here = false;
-    }
+      student.here = false;
+      studentList.splice(indexOf(student), 1);
+      console.log(studentList);
+
+    };
 });
 
 /*
