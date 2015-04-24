@@ -1,34 +1,23 @@
 
 <div class="well filter">
-  <div class="col-md-6"><!-- ==== ADD STUDENT ==== -->
-    <form ng-submit="addStudent(studentName)" class="form-inline" role="form">
-      <div class="form-group">
-        <input type="text" ng-model="studentName" class="form-control" id="student-name" placeholder="New Student Name">
-      </div>
-      <button type="submit" class="btn btn-default">Submit</button>
-    </form>
-  </div>
+  <button ui-sref="home" class="btn btn-default btn-sm">Home</button>
+  <button ui-sref="sign-in" class="btn btn-default btn-sm">Attendance</button>
 
-  <div class="col-md-12"> <!-- ==== SEARCH STUDENTS ==== -->
-    <form class="form-inline" role="form">
-      <div class="form-group">
-        <input ng-model="query" type="text" class="form-control" id="student-name" placeholder="Search Students">
-      </div>
+  <!-- ==== ADD STUDENT ==== -->
+    <form ng-submit="addStudent(studentName)" class="adminNav form-inline" role="form">
+      <input type="text" ng-model="studentName" class="form-control input-sm" id="student-name" placeholder="New Student Name">
+      <button type="submit" class="btn btn-default btn-sm">Submit</button>
     </form>
-  </div>
+
+ <!-- ==== SEARCH STUDENTS ==== -->
+    <form class="adminSearch form-inline" role="form" style="float: right">
+        <input ng-model="query" type="text" class="form-inline input-sm" id="student-name" placeholder="Search Students">
+    </form>
 </div>
 
-<!-- OLD REPEAT/EDIT  <div class="col-sm-1" ng-repeat='student in students'>
-  <span class="">{{ student.name }}
-    <a class="btn btn-success" ng-click="edit">Edit Student</a>
-    <a class="btn btn-danger" ng-show="edit" ng-click="deleteStudent(student)">Delete</a>
-  </span>
-</div> -->
 
 
-
-
-
+<!-- ==== LIST STUDENTS ==== -->
 <div class="col-md-6">
   <h2 ng-show="students.length && filtered.length">Student List</h2>
   <h2 ng-show="students.length && !filtered.length">No Matches</h2>
@@ -37,13 +26,15 @@
     <li ng-repeat="student in filtered = (students | filter:query)">
 
       <span ng-click="editing = true" ng-hide="editing">
-        {{student.name}} <a ng-click="deleteStudent(student)">Edit</a>
+        <h5>{{student.name}}
+        <a class="btn btn-default btn-sm">Edit</a></h5>
       </span>
 
       <span class="form-group" ng-show="editing" ng-submit="editing = false">
         <form class="form-inline" role="form">
           <input type="text" class="form-control input-sm" ng-model="student.name" placeholder="Name" required/>
           <button class="btn btn-default btn-sm" type="submit">Save</button>
+          <button class="btn btn-danger btn-sm" ng-click="deleteStudent(student)">Delete</button>
         </form>
       </span>
 
@@ -51,16 +42,6 @@
   </ul>
 </div>
 
-<!-- ADD SEARCH FIELD, NG-MODEL: "query" (or squeezy or stan or...) -->
-
-
-
-<!-- ADD INTO EACH NG-REPEAT ELEMENT:
-        EDITING
-        SHOW(input, save, delete)
-        HIDE(name?)
-
-        -->
 
 
 
@@ -69,7 +50,7 @@
 
 
 
-<!-- DISPLAY ADMIN (Sign In, List Here / Not Here)============= -->
+<!-- ADMIN (List Here / Not Here)============= -->
   <!-- <div class='row admin'>
 
     <div class='col-md-6'><h2>HERE</h2>

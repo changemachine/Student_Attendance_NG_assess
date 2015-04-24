@@ -49,7 +49,7 @@ studentAttendance.controller('AdminCtrl', function AdminCtrl($scope) {
   };
 
   $scope.deleteStudent = function(student) {
-    $scope.students.splice(students.indexOf(student), 1);
+    $scope.students.splice($scope.students.indexOf(student), 1);
   };
 
 });
