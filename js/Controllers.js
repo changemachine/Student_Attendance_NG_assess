@@ -6,6 +6,13 @@ studentAttendance.controller('StudentsCtrl', function StudentsCtrl($scope) {
         { name: "John Ford", here: false },
         { name: "Ford Falcon", here: false }
     ];
+
+    $scope.signIn = function(student) {
+      $scope.students.student.here = true;
+    }
+    $scope.signOut = function(student) {
+      $scope.students.student.here = false;
+    }
 });
 
 /*

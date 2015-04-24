@@ -43,8 +43,8 @@
           <ul>
             <li ng-repeat='student in students'>
               <span>
-                {{ student.name }} {{student.here}}
-                <a ng-click="signIn(student)">Sign In</a>
+                {{ student.name }} {{ student.here }}
+                <a ng-click="student.here = true">Sign In</a>
               </span>
             </li>
           </ul>
