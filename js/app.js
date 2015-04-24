@@ -1,1 +1,1 @@
-var studentAttendence = angular.module('studentAttendence', []); //[dependencies]
+var studentAttendance = angular.module('studentAttendance', []); //[dependencies]
