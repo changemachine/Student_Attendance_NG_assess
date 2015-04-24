@@ -6,9 +6,9 @@
     <!-- ALL STUDENTS -->
       <div class="col-sm-1" ng-repeat='student in students'>
         <span class="">{{ student.name }}
-          <a class="btn btn-success" ng-show="!student.here" ng-click="signIn(student)">Sign In</a>
+          <a class="btn btn-success" ng-show="!student.here" ng-click="UtilitiesFactory.signIn(student)">Sign In</a>
 
-          <a class="btn btn-danger" ng-show="student.here" ng-click="signOut(student)">Sign Out</a>
+          <a class="btn btn-danger" ng-show="student.here" ng-click="UtilitiesFactory.signOut(student)">Sign Out</a>
         </span>
       </div>
   </div>
