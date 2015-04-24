@@ -26,6 +26,7 @@ studentAttendance.controller('StudentsCtrl', function StudentsCtrl($scope) {
     };
 });
 
+// =========== ADMIN CONTROL ==============
 studentAttendance.controller('AdminCtrl', function AdminCtrl($scope) {
   $scope.students = [
       { name: "Jane Farley", here: false },
@@ -39,5 +40,14 @@ studentAttendance.controller('AdminCtrl', function AdminCtrl($scope) {
   ];
 
   studentList = [];
+
+  $scope.addStudent = function(studentName) {
+    student = { name: studentName, here: false };
+    students.push(student);
+  };
+
+  $scope.deleteStudent = function(student) {
+    students.splice(students.indexOf(student), 1);
+  };
 
 });
