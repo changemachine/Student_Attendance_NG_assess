@@ -1,30 +1,9 @@
---As a student, I click a button next to my name to sign in.  After I've signed in, I can then sign out (visibly, so that people know I'm gone).
---As a teacher, I want to go to a page to see a list of all the students who are here and not here.
-
-Suggested Layout:
-
-HOME
-- OPTIONS
-  - Student Sign-In Page
-  - List Students
-  - BONUS: Admin Page (add/delete/mod/search)
-
-
-SIGN-IN PAGE
-- Home
-- Student List
-- SignIn/Out buttons
-- BONUS: Same-Page Admin (add/delete/mod/search)
-
-
-
-
-
 # Student Sign-in for Epicodus
 ## by James Nielson
-#### Date: April 24, 2015
+#### April 24, 2015
 
-An app to keep students in line.
+##Description
+A student roster and attendance tracker.  Students may log in and out, and an overlord can add, delete, modify and filter students.
 
 
     ##Technologies Used
@@ -32,11 +11,15 @@ An app to keep students in line.
     - AngulerUI Router
     - HTML
     - CSS
+    - A server
     - Computers
 
 
-    ##Use and Editing
-    To use the app, download the source code and run it in your browser.
+    ##Use
+    - Download the source code.
+    - Direct Terminal to the project's folder (root)
+    - Fire up a server (ie, python -m SimpleHTTPServer)
+    - Open a browser window to localhost:8000
 
 
     #### Copyright © 2015, James Nielson
