@@ -10,17 +10,17 @@ studentAttendance.controller('StudentsCtrl', function StudentsCtrl($scope) {
         { name: "Tran Falcon", here: false }
     ];
 
-    $scope.studentList = [];
-    // $scope.checkedIn = [];
+    studentList = [];
 
     $scope.signIn = function(student) {
       student.here = true;
       studentList.push(student);
       console.log(studentList);
     };
+
     $scope.signOut = function(student) {
       student.here = false;
-      studentList.splice(indexOf(student), 1);
+      studentList.splice(studentList.indexOf(student), 1);
       console.log(studentList);
 
     };
