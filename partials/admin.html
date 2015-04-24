@@ -1,7 +1,7 @@
 
 <div class="well filter">
   <div class="col-md-6"><!-- ==== ADD STUDENT ==== -->
-    <form ng-submit="addStudent()" class="form-inline" role="form">
+    <form ng-submit="addStudent(studentName)" class="form-inline" role="form">
       <div class="form-group">
         <input type="text" ng-model="studentName" class="form-control" id="student-name" placeholder="New Student Name">
       </div>
@@ -37,7 +37,7 @@
     <li ng-repeat="student in filtered = (students | filter:query)">
 
       <span ng-click="editing = true" ng-hide="editing">
-        {{student.name}} <a ng-click="deleteStudent(student)">Delete</a>
+        {{student.name}} <a ng-click="deleteStudent(student)">Edit</a>
       </span>
 
       <span class="form-group" ng-show="editing" ng-submit="editing = false">
