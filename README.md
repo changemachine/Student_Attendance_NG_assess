@@ -17,7 +17,7 @@ A student roster and attendance tracker.  Students may log in and out, and an ov
 
     ##Use
     - Download the source code.
-    - Direct Terminal to the project's folder (root)
+    - Direct Terminal to the project root
     - Fire up a server (ie, python -m SimpleHTTPServer)
     - Open a browser window to localhost:8000
 
